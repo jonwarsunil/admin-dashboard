@@ -1,24 +1,18 @@
-# 🧑‍💼 Admin Dashboard
+# Admin Dashboard
 
 A responsive and modern Admin Dashboard built with **React 19**, **TypeScript**, and **Tailwind CSS**, demonstrating component-based architecture, API integration, state management, performance optimization, and responsive UI/UX.
 
-## 🚀 Live Demo
+## Live Demo
 
 🔗 [View Live Site](https://admin-dashboard-iota-rouge.vercel.app/)  
 💡 You can **sign in with any email and password** to access the dashboard.
 
 # 1. Clone the Repository
 
-git clone https://github.com/jonwarsunil/admin-dashboard.git
-cd admin-dashboard
-
-# 2. Install Dependencies
-
-Yarn install
-
-# 3. Run Development Server
-
-Yarn dev
+1. git clone https://github.com/jonwarsunil/admin-dashboard.git
+2. cd admin-dashboard
+3. Yarn
+4. Yarn dev
 
 ## 📸 Overview
 
@@ -51,24 +45,39 @@ This Admin Dashboard includes:
 ## 📁 Project Structure
 
 ```bash
+src/
+├── assets/
 ├── components/
-│   ├── Sidebar.tsx
-│   ├── Navbar.tsx
-│   ├── ThemeToggle.tsx
-│   ├── SummaryCards.tsx
-│   ├── UserTable.tsx
-│   ├── SearchBar.tsx
-│   ├── Pagination.tsx
-│   └── LoginForm.tsx
-├── pages/
-│   ├── Dashboard.tsx
-│   └── Login.tsx
+│   ├── layout/
+│   │   ├── Button.tsx
+│   │   ├── DataTable.tsx
+│   │   ├── Dropdown.tsx
+│   │   ├── Input.tsx
+│   │   ├── Pagination.tsx
+│   │   ├── SearchBar.tsx
+│   │   ├── Spinner.tsx
+│   │   ├── StatCard.tsx
+│   │   ├── StatusFilter.tsx
+│   │   ├── ThemeToggle.tsx
+│   │   └── UserGrowthChart.tsx
+├── features/
+│   ├── dashboard/
+│   │   ├── DashboardPage.tsx
+│   │   ├── dashboardSlice.ts
+│   │   └── DashboardSummary.tsx
+│   ├── reports/
+│   │   └── ReportsPage.tsx
 ├── hooks/
-│   └── useFetchUsers.ts
+│   ├── useFetchUsers.ts
+│   ├── useFilter.ts
+│   └── useUser.tsx
+├── pages/
+│   ├── Setting.tsx
+│   ├── SignIn.tsx
+│   └── User.tsx
 ├── types/
-│   └── index.ts
-├── App.tsx
-└── main.tsx
+├── App.css
+
 
 
 
