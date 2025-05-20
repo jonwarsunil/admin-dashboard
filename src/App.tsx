@@ -4,6 +4,7 @@ import { Sidebar } from './components/layout/sidebar';
 import { Navbar } from './components/layout/Navbar';
 import Spinner from './components/Spinner';
 import Settings from './pages/Setting';
+import NotFoundPage from './pages/404';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(() => {
@@ -31,6 +32,7 @@ function App() {
         <main className='flex-1 overflow-auto'>
           <Suspense fallback={<Spinner />}>
             <Routes>
+              <Route path='*' element={<NotFoundPage />} />
               <Route
                 path='/'
                 element={isAuthenticated ? <Navigate to='/dashboard' replace /> : <Navigate to='/signin' replace />}
