@@ -1,6 +1,6 @@
 import { FaChartBar, FaTachometerAlt, FaUsers } from 'react-icons/fa';
 import { NavItem } from './NavItem';
-import { Settings } from 'lucide-react';
+import { Blocks, Settings } from 'lucide-react';
 import { useEffect } from 'react';
 import clsx from 'clsx';
 
@@ -43,6 +43,9 @@ export function Sidebar({ mobileMenuOpen, setMobileMenuOpen }: SidebarProps) {
         </NavItem>
         <NavItem to='/settings' icon={<Settings />} onClick={() => setMobileMenuOpen(false)}>
           Settings
+        </NavItem>
+        <NavItem to='/blogs' icon={<Blocks />} onClick={() => setMobileMenuOpen(false)}>
+          blogs
         </NavItem>
       </nav>
     </div>

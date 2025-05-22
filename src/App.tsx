@@ -5,13 +5,14 @@ import { Navbar } from './components/layout/Navbar';
 import Spinner from './components/Spinner';
 import Settings from './pages/Setting';
 import NotFoundPage from './pages/404';
+import Blogs from './pages/Blogs';
 
 function App() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(() => {
     return localStorage.getItem('isAuthenticated') === 'true';
   });
 
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const handleLogout = () => {
     localStorage.removeItem('isAuthenticated');
     localStorage.removeItem('userEmail');
@@ -55,6 +56,7 @@ function App() {
               <Route path='/users' element={isAuthenticated ? <Users /> : <Navigate to='/signin' replace />} />
               <Route path='/reports' element={isAuthenticated ? <Reports /> : <Navigate to='/signin' replace />} />
               <Route path='/settings' element={isAuthenticated ? <Settings /> : <Navigate to='/signin' replace />} />
+              <Route path='/blogs' element={isAuthenticated ? <Blogs /> : <Navigate to='/signin' replace />} />
             </Routes>
           </Suspense>
         </main>
